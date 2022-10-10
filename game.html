@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NINJA</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/characters.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=ZCOOL+KuaiLe&display=swap" rel="stylesheet">
+    <link rel="icon" href="rsx/icon.png" />
+</head>
+<body>
+
+    <div id="scene">
+
+        <div class="players-data">
+            <div id="player-two-data">
+                <div id="player-two-name"></div>
+                <div id="player-two-life"></div>
+            </div>
+            <div id="player-one-data">
+                <div id="player-one-name"></div>
+                <div id="player-one-life"></div>
+            </div>
+        </div>
+
+        <div id="player-one" class="player">
+            <div class="player-head"></div>
+            <div class="player-body"></div>
+            <div id="shuriken-one" class="shuriken"></div>
+        </div>
+
+        <div id="player-two" class="player">
+            <div class="player-head"></div>
+            <div class="player-body"></div>
+            <div id="shuriken-two" class="shuriken"></div>
+        </div>
+
+        <button id="play-again">Play Again !</button>
+        <audio id="music" controls autoplay muted>
+            <source src="../NINja_SJ/rsx/11_Heavy_Violence.ogg" type="audio/ogg"/>
+        </audio>
+
+    </div>
+
+    <script src="js/map.js"></script>
+    <script src="js/tools.js"></script>
+    <script src="js/life.js"></script>
+    <script src="js/player.js"></script>
+    <script src="js/game.js"></script>
+    
+</body>
+</html>

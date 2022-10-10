@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/home.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=ZCOOL+KuaiLe&display=swap" rel="stylesheet">
+    <link rel="icon" href="rsx/icon.png" />
+</head>
+<body>
+
+    <div id="Home">
+
+        <div class="Layout">
+
+
+            <img class="icon" src="rsx/icon.png" alt="">
+            <h1>Fighting party 2021 <small>©</small></h1>
+
+            <form action="game.html">
+
+                <section id="config-player-name">
+                    <h2>Veuillez entrer le nom des joueurs</h2>
+                        <fieldset>
+                            <label for="playerOneName">Joueur 1</label>
+                            <input type="text" name="playerOneName" id="playerOneName">
+                        </fieldset>
+                        <fieldset>
+                            <label for="playerTwoName">Joueur 2</label>
+                            <input type="text" name="playerTwoName" id="playerTwoName">
+                        </fieldset>
+                        
+                </section>
+    
+                <section class="config" id="config-players-choice">
+                    <h2>Choisissez un personnage</h2>
+                        <dl>
+                        <dt>Joueur 1</dt>
+                        <dd>
+                            <ul class="player-choice playerOne">
+                                <li class="naruto"></li>
+                                <li class="sasuke"></li>
+                                <li class="naruto"></li>
+                                <li class="sasuke"></li>
+                                <li class="naruto"></li>
+                                <li class="sasuke"></li>
+                                <li class="naruto"></li>
+                                <li class="sasuke"></li>
+                            </ul>
+                        </dd>
+                        </dl>
+                        <dl>
+                        <dt>Joueur 2</dt>
+                        <dd>
+                            <ul class="player-choice playerTwo">
+                                <li class="naruto"></li>
+                                <li class="sasuke"></li>
+                                <li class="sasuke"></li>
+                                <li class="naruto"></li>
+                                <li class="sasuke"></li>
+                                <li class="naruto"></li>
+                                <li class="naruto"></li>
+                                <li class="sasuke"></li>
+                            </ul>
+                        </dd>
+                        
+                        </dl>
+                       
+                </section id="config-map">
+
+                <section>
+
+                    <h2>Choisissez une arène</h2>
+                        <dl>
+                        <dd>
+                            <ul class="map-choice">
+                                <li class="streetFighter"></li>
+                                <li class="temple"></li>
+                                <li class="garage"></li>
+                                <li class="namek"></li>
+                                <li class="mustafar"></li>
+                                <li class="mandalore"></li>
+                                <li class="airport"></li>
+                                <li class="capsule"></li>
+                            </ul>
+                        </dd>
+                        </dl>
+
+                </section>
+                        <input type="hidden" name="playerOne" id="playerOne">
+                        <input type="hidden" name="playerTwo" id="playerTwo">
+                        <input type="hidden" name="map" id="map">
+                <input class="Button" type="submit" value="Play !">
+
+            </form>
+
+        </div>
+    </div>
+    <script src="js/home.js"></script>
+</body>
+</html>

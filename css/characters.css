@@ -1,0 +1,111 @@
+/*PLAYER HEAD*/
+ #player-one.naruto .player-head{
+    background-image: url(../../NINja_SJ/rsx/naruto-head-right.png);
+    background-repeat: var(--bg-repeat);
+    top: var(--top-head);
+    right: -5px;
+}
+#player-one.sasuke .player-head{
+    background-image: url(../../NINja_SJ/rsx/sasuke-head-right.png);
+    background-repeat: var(--bg-repeat);
+    top: var(--top-head);
+    right: -5px;
+}
+#player-two.naruto .player-head{
+    background-image: url(../../NINja_SJ/rsx/naruto-head-left.png);
+    background-repeat: var(--bg-repeat);
+    top: var(--top-head);;
+    left: -10px;
+}
+#player-two.sasuke .player-head{
+    background-image: url(../../NINja_SJ/rsx/sasuke-head-left.png);
+    background-repeat: var(--bg-repeat);
+    top: var(--top-head);;
+    left: -10px;
+}
+
+/*PLAYER BODY*/
+#player-one.naruto .player-body{
+    background-image: url(../../NINja_SJ/rsx/naruto-body-right.png);
+    background-repeat: var(--bg-repeat);
+}
+#player-one.sasuke .player-body{
+    background-image: url(../../NINja_SJ/rsx/sasuke-body-right.png);
+    background-repeat: var(--bg-repeat);
+}
+#player-two.naruto .player-body{
+    background-image: url(../../NINja_SJ/rsx/naruto-body-left.png);
+    background-repeat: var(--bg-repeat);
+}
+#player-two.sasuke .player-body{
+    background-image: url(../../NINja_SJ/rsx/sasuke-body-left.png);
+    background-repeat: var(--bg-repeat);
+}
+
+/*PLAYER PLAYING*/
+#player-one.playing.naruto .player-head{
+    background-image: url(../../NINja_SJ/rsx/naruto-head-playing-right.png);
+    background-repeat: var(--bg-repeat);
+    display: block;
+}
+#player-one.playing.sasuke .player-head{
+    background-image: url(../../NINja_SJ/rsx/sasuke-head-playing-right.png);
+    background-repeat: var(--bg-repeat);
+    display: block;
+}
+#player-one.playing.naruto .player-body{
+    background-image: url(../../NINja_SJ/rsx/naruto-body-playing-right.png);
+    background-repeat: var(--bg-repeat);
+}
+#player-one.playing.sasuke .player-body{
+    background-image: url(../../NINja_SJ/rsx/sasuke-body-playing-right.png);
+    background-repeat: var(--bg-repeat);
+}
+#player-two.playing.naruto .player-head{
+    background-image: url(../../NINja_SJ/rsx/naruto-head-playing-left.png);
+    background-repeat: var(--bg-repeat);
+    display: block;
+}
+#player-two.playing.sasuke .player-head{
+    background-image: url(../../NINja_SJ/rsx/sasuke-head-playing-left.png);
+    background-repeat: var(--bg-repeat);
+    display: block;
+}
+#player-two.playing.naruto .player-body{
+    background-image: url(../../NINja_SJ/rsx/naruto-body-playing-left.png);
+    background-repeat: var(--bg-repeat);
+}
+#player-two.playing.sasuke .player-body{
+    background-image: url(../../NINja_SJ/rsx/sasuke-body-playing-left.png);
+    background-repeat: var(--bg-repeat);
+}
+
+/*PLAYER WINNER*/
+#player-one.winner.naruto .player-body{
+    background-image: url(../../NINja_SJ/rsx/naruto-escape-right.png);
+    background-repeat: var(--bg-repeat);
+}
+#player-one.winner.sasuke .player-body{
+    background-image: url(../../NINja_SJ/rsx/sasuke-escape-right.png);
+    background-repeat: var(--bg-repeat);
+}
+#player-one.winner.naruto .player-head{
+    display: none;
+}
+#player-one.winner.sasuke .player-head{
+    display: none;
+}
+#player-two.winner.naruto .player-body{
+    background-image: url(../../NINja_SJ/rsx/naruto-escape-left.png);
+    background-repeat: var(--bg-repeat);
+}
+#player-two.winner.sasuke .player-body{
+    background-image: url(../../NINja_SJ/rsx/sasuke-escape-left.png);
+    background-repeat: var(--bg-repeat);
+}
+#player-two.winner.naruto .player-head{
+    display: none;
+}
+#player-two.winner.sasuke .player-head{
+    display: none;
+}

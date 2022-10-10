@@ -1,0 +1,321 @@
+:root {
+    --bg-repeat: no-repeat;
+    --anim-fillmode: forwards;
+    --bottom-player: 150px;
+    --right-player: 200px;
+    --left-player: 200px;
+    --anim-duration: 0.5s;
+    --anim-delay: 0.35s;
+    --top-head: 11px;
+    --bottom-shurikill: 180px;
+    --rotate-start: rotate(0deg);
+    --rotate-end: rotate(360deg);
+    --top-headchoped: 250px;
+    --escape-side-start: 200px ;
+    --escape-side-end: 150px;
+    --escape-bottom-start: 150px ;
+    --escape-bottom-end: 50px;
+}
+
+html, body{
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    font-family: 'ZCOOL KuaiLe', cursive;
+}
+
+.players-data{
+    display: flex;
+    color: white;
+    font-family: 'ZCOOL KuaiLe', cursive;
+    font-size: 25px;
+    padding: 1em;
+}
+
+.players-data>div{
+    display: flex;
+    flex-wrap: wrap;
+    width: 50%;
+    padding: 1em;
+}
+
+#player-one-name{
+    margin-bottom: 1em;
+}
+
+#player-two-name{
+    margin-bottom: 1em;
+}
+
+.players-data>div:first-child{
+    justify-content: flex-start;
+    text-align: left;
+    background-color: rgba(0, 0, 0, 0.473);
+}
+
+.players-data>div:last-child{
+    justify-content: flex-end;
+    text-align: right;
+    background-color: rgba(0, 0, 0, 0.473);
+}
+
+.players-data>div>div{
+    width: 100%;
+}
+
+.players-data>div:last-child .player-life{
+    flex-direction: row-reverse;
+}
+
+div.player-life{
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+div.player-life>div{
+    background-color: rgb(30, 197, 30);
+    height: 20px;
+}
+
+div.player-life>div.damaged{
+    background-color: rgb(231, 48, 48);
+}
+
+#play-again{
+    display: none;
+}
+
+#play-again.play-again-show{
+    display: block;
+    position: absolute;
+    left: 20%;
+    top: 200px;
+    color: white;
+    font-family: 'ZCOOL KuaiLe', cursive;
+    font-size: 150px;
+    padding: 1em;
+    background-color: rgba(0, 0, 0, 0);
+    border: none;
+    color: white;
+    cursor: pointer;
+    text-shadow: 4px 4px 8px orangered;
+    opacity: 0;
+    transform: translateX(-30px);
+    animation: apparition 0.6s 0.6s ease-out forwards;
+}
+
+#music{
+    position: absolute;
+    left: 42%;
+    top: 800px;
+}
+
+#scene{
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    background-image: url(../../NINja_SJ/rsx/scene1.png);
+    background-repeat: var(--bg-repeat);
+    background-size: cover;
+    background-position: center bottom;
+}
+
+#scene.streetFighter{
+    background-image: url(../../NINja_SJ/rsx/scene1.png);
+}
+
+#scene.temple{
+    background-image: url(../../NINja_SJ/rsx/scene2.png);
+}
+
+#scene.garage{
+    background-image: url(../../NINja_SJ/rsx/scene4.png);
+}
+
+#scene.namek{
+    background-image: url(../../NINja_SJ/rsx/scene5.png);
+}
+
+#scene.mustafar{
+    background-image: url(../../NINja_SJ/rsx/scene7.png);
+}
+
+#scene.mandalore{
+    background-image: url(../../NINja_SJ/rsx/scene8.png);
+}
+
+#scene.airport{
+    background-image: url(../../NINja_SJ/rsx/scene3.png);
+}
+
+#scene.capsule{
+    background-image: url(../../NINja_SJ/rsx/scene6.png);
+}
+
+#player-one{
+    bottom: var(--bottom-player);
+    right: var(--right-player);
+    animation-name: player-one-move;
+    animation-duration: var(--anim-duration);
+    animation-fill-mode: var(--anim-fillmode);
+    animation-delay: var(--anim-delay);
+    animation-iteration-count: infinite;
+}
+
+
+#player-two{
+    bottom: var(--bottom-player);
+    left: var(--left-player);
+    animation-name: player-two-move;
+    animation-duration: var(--anim-duration);
+    animation-fill-mode: var(--anim-fillmode);
+    animation-delay: var(--anim-delay);
+    animation-iteration-count: infinite;
+}
+
+#player-one.loser .player-head{
+    animation-name: playerone-head-choped; 
+    animation-duration: var(--anim-duration);
+    animation-fill-mode: var(--anim-fillmode);
+    animation-delay: var(--anim-delay);
+}
+
+#player-two.loser .player-head{
+    animation-name: playertwo-head-choped; 
+    animation-duration: var(--anim-duration);
+    animation-fill-mode: var(--anim-fillmode);
+    animation-delay: var(--anim-delay);
+}
+
+.player{
+    position: absolute;
+    display: flex;
+    flex-wrap: wrap;
+    width: 200px;
+    justify-content: center;
+}
+
+.player-head{
+    width: 150px;
+    height: 150px;
+    position: relative;
+}
+
+.player-body{
+    width: 200px;
+    height: 200px;
+}
+
+.shuriken{
+    width : 30px;
+    height: 10px;
+    position: absolute;
+    background-image: url(../../NINja_SJ/rsx/shuriken.png);
+    background-repeat: var(--bg-repeat);
+    /*top: 174px;
+    left: 154px;*/
+}
+
+#player-one .shuriken{
+    left: -4px;
+    bottom: 132px;
+}
+
+#player-two .shuriken {
+    bottom: 156px;
+    left: 138px;
+}
+
+#player-one.playing .shuriken{
+    left: 75px;
+    bottom: 180px;
+    animation-name: shuri-kill-playertwo;
+    animation-duration: var(--anim-duration);
+    animation-fill-mode: var(--anim-fillmode);
+}
+
+#player-two.playing .shuriken{
+    left: 125px;
+    bottom: 180px;
+    animation-name: shuri-kill-playerone;
+    animation-duration: var(--anim-duration);
+    animation-fill-mode: var(--anim-fillmode);
+}
+
+#player-one.winner{
+    animation-name: playerone-escape;
+    animation-duration: var(--anim-duration);
+    animation-fill-mode: var(--anim-fillmode);
+    animation-delay: var(--anim-delay);
+}
+#player-two.winner{
+    animation-name: playertwo-escape;
+    animation-duration: var(--anim-duration);
+    animation-fill-mode: var(--anim-fillmode);
+    animation-delay: var(--anim-delay);
+}
+.damaged  {
+    animation-duration: .8s;
+    animation-name: damaged;
+    transition: none;
+    animation-delay: var(--anim-delay);
+ }
+
+/* The animation code */
+
+@keyframes shuri-kill-playerone {
+    0%   {left: 125px; bottom: var(--bottom-shurikill);}
+    100% {left: 110vw;bottom: var(--bottom-shurikill);}
+}
+
+@keyframes shuri-kill-playertwo {
+    0%   {left: 75px; bottom: var(--bottom-shurikill);}
+    100% {left: -110vw;bottom: var(--bottom-shurikill);}
+}
+
+@keyframes playerone-head-choped {
+    0%   {transform: var(--rotate-start);}
+    100% {transform: var(--rotate-end); top: var(--top-headchoped); left: 100px}
+}
+
+@keyframes playertwo-head-choped {
+    0%   {transform: var(--rotate-start);}
+    100% {transform: var(--rotate-end); top: var(--top-headchoped); left: -100px}
+}
+
+@keyframes playerone-escape {
+    0%   {bottom: var(--escape-bottom-start); right: var(--escape-side-start);}
+    100% {bottom: var(--escape-bottom-end); right: var(--escape-side-end);}
+}
+
+@keyframes playertwo-escape {
+    0%   {bottom: var(--escape-bottom-start); left: var(--escape-side-start);}
+    100% {bottom: var(--escape-bottom-end); left: var(--escape-side-end);}
+}
+
+ @keyframes damaged {
+   0%   { opacity:1; }
+   40%   {opacity:0; }
+   100% { opacity:1; }
+ }
+
+ @keyframes apparition{
+    100%{
+      opacity: 1;
+      transform: none;
+    }
+}
+
+@keyframes player-two-move {
+    0%   {left: var(--left-player); bottom: var(--bottom-shurikill);}
+    50% {left: 210px; bottom: 185px;}
+    100% {left: var(--left-player);bottom: var(--bottom-shurikill);}
+}
+
+ @keyframes player-one-move {
+    0%   {right: var(--right-player); bottom: var(--bottom-shurikill);}
+    50% {right: 190px; bottom: 185px;}
+    100%   {right: var(--right-player); bottom: var(--bottom-shurikill);}
+} 
